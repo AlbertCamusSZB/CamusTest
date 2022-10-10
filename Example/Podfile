@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'CamusTest_Example' do
+  pod 'CamusTest', :path => '../'
+
+  target 'CamusTest_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
