@@ -1,9 +1,15 @@
+source "https://github.com/AlbertCamusSZB/Podspecs.git"
+source 'https://github.com/CocoaPods/Specs.git'
+
 use_frameworks!
 
 platform :ios, '10.0'
 
 target 'CamusTest_Example' do
   pod 'CamusTest', :path => '../'
+  
+#  pod 'CamusTest'
+#  pod 'CamusTest/subClassA'
 
   target 'CamusTest_Tests' do
     inherit! :search_paths
