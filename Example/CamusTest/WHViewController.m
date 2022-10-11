@@ -7,6 +7,8 @@
 //
 
 #import "WHViewController.h"
+#import <CamusTest/WHCamusView.h>
+//#import <CamusTest/WHCamusView.h>
 
 @interface WHViewController ()
 
@@ -18,6 +20,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+//    WHCamusView *camusView = [[WHCamusView alloc] init];
+//    camusView.frame = CGRectMake(100, 100, 300, 200);
+//    [self.view addSubview:camusView];
+//    camusView.backgroundColor = [UIColor redColor];
+    
 }
 
 - (void)didReceiveMemoryWarning

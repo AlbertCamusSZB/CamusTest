@@ -39,8 +39,8 @@
 /* Begin PBXFileReference section */
 		04EB66B18BA619B070BB7B8C /* Pods-CamusTest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamusTest_Example.debug.xcconfig"; path = "Target Support Files/Pods-CamusTest_Example/Pods-CamusTest_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		21D0BCB4FD1C1485CBFDDCA7 /* Pods_CamusTest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamusTest_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		325EEBF352D17F2AE027A7AE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		49BDF52F2C8A821742DBF626 /* CamusTest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CamusTest.podspec; path = ../CamusTest.podspec; sourceTree = "<group>"; };
+		325EEBF352D17F2AE027A7AE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		49BDF52F2C8A821742DBF626 /* CamusTest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CamusTest.podspec; path = ../CamusTest.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* CamusTest_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CamusTest_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +63,7 @@
 		6099E2E46F232D1A92C60496 /* Pods-CamusTest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamusTest_Example.release.xcconfig"; path = "Target Support Files/Pods-CamusTest_Example/Pods-CamusTest_Example.release.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D24B7FF627AA3CE95FF27ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8D24B7FF627AA3CE95FF27ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A7978D82FC0C70BF7616719B /* Pods-CamusTest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamusTest_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CamusTest_Tests/Pods-CamusTest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C4C1945179EBAF044D0CCB37 /* Pods_CamusTest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamusTest_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F964EB3EEAF53940EBC4353E /* Pods-CamusTest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamusTest_Tests.release.xcconfig"; path = "Target Support Files/Pods-CamusTest_Tests/Pods-CamusTest_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +193,6 @@
 				A7978D82FC0C70BF7616719B /* Pods-CamusTest_Tests.debug.xcconfig */,
 				F964EB3EEAF53940EBC4353E /* Pods-CamusTest_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				46071ECC79E31B15A0BAED9D /* [CP] Embed Pods Frameworks */,
+				8E4F1ECCEC2E247621DE4E0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -317,24 +317,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		46071ECC79E31B15A0BAED9D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CamusTest_Example/Pods-CamusTest_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CamusTest/CamusTest.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CamusTest.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CamusTest_Example/Pods-CamusTest_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4DA9DF65AEA5DE2F39B8A3A7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +337,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E4F1ECCEC2E247621DE4E0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CamusTest_Example/Pods-CamusTest_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CamusTest/CamusTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CamusTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CamusTest_Example/Pods-CamusTest_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
